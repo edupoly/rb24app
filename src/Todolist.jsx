@@ -8,6 +8,7 @@ function Todolist(){
     return(
         <div className='mybox'>
             <h1>Todolist</h1>
+            <input type="text" />
             <ul>
                 {
                     todos.map((todo)=>{
