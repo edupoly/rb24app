@@ -1,9 +1,21 @@
 import React from 'react';
-
+import Todo from './Todo';
 function Todolist(){
     //state
-    var [todos,setTodos]=React.useState(['get car','buy newhouse'])
+    var [todos,setTodos]=React.useState([
+                                        'get car',
+                                        'buy newhouse',
+                                        'get a bike',
+                                        'pay bills',
+                                        'make a new board'
+                                    ])
     //logic
+    function deleteTodo(i){
+        //alert("delete chddam"+i)
+        var temp = [...todos]
+        temp.splice(i,1);
+        setTodos([...temp])
+    }
     //template
     return(
         <div className='mybox'>
@@ -11,8 +23,8 @@ function Todolist(){
             <input type="text" />
             <ul>
                 {
-                    todos.map((todo)=>{
-                        return <li>{todo}</li>
+                    todos.map((todo,i)=>{
+                        return <Todo todo={todo} d={deleteTodo} i={i}></Todo>
                     })
                 }
             </ul>
