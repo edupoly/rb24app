@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Todo(props) {
-    
+    console.log("Todo comp rendered")
   return (
         <>
             <li className='mybox'>
@@ -14,4 +14,4 @@ function Todo(props) {
   )
 }
 
-export default Todo
+export default React.memo(Todo)

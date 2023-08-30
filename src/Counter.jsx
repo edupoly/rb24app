@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Counter(props){
-    console.log(props)
     //state
     var [count,setCount]=React.useState(props.s)
     //logic
