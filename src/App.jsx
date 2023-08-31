@@ -1,29 +1,21 @@
 import React from 'react';
-
+import axios from 'axios'
 function App() {
-  var [x,setx] = React.useState(133);
-  var [y,sety] = React.useState(234);
+  var [countries,setCountries] = React.useState([])
   React.useEffect(()=>{
-    console.log("absdf")
-  },[]);
-
-  React.useEffect(()=>{
-    console.log("x updated")
-  },[x]);
-  React.useEffect(()=>{
-    console.log("y updated")
-  },[y]);
-
-  React.useEffect(()=>{
-    console.log("balu")
-  });
+    axios.get("https://restcountries.com/v3/all").then((res)=>{
+      setCountries([...res.data])
+      console.log(res.data)
+    })
+  },[])
   return (
     <div className="mybox">
       <h1>Welcome to Edupoly ReactJS Training</h1>
-      <h1>Counter:{x}</h1>
-      <h1>Counter:{y}</h1>
-      <button onClick={()=>{setx(x+1)}}>Increment X</button>
-      <button onClick={()=>{sety(y+1)}}>Increment Y</button>
+      {
+        countries.length>0 && countries.map((c)=>{
+          return <li>{c.name.common}</li>
+        })
+      }
     </div>
   );
 }
