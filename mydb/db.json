@@ -1,0 +1,39 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "ReactJS18",
+      "author": "Madhuri"
+    },
+    {
+      "id": 4,
+      "title": "html",
+      "author": "krishnavamsi"
+    },
+    {
+      "title": "CSS",
+      "author": "Karthik",
+      "id": 5
+    },
+    {
+      "title": "Bootstrap5",
+      "author": "Manjunath K",
+      "id": 7
+    },
+    {
+      "title": "Nenu Na black shirtuuu",
+      "author": "Vamsi",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
