@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createRoot } from "react-dom/client";
 import './index.css';
 import App from './App';
+import Books from './features/books/Books';
 import Counter from './features/counter/Counter';
 import reportWebVitals from './reportWebVitals';
 import {
@@ -13,6 +14,8 @@ import {
   } from "react-router-dom";
 import Countries from './features/countries/Countries';
 import CountryDetails from './features/countries/CountryDetails';
+import AddBook from './features/books/AddBook';
+import UpdateBook from './features/books/UpdateBook';
   const router = createBrowserRouter([
     {
       path: "/",
@@ -32,6 +35,20 @@ import CountryDetails from './features/countries/CountryDetails';
                 }
             ]
         },
+        {
+          path:'/books',
+          element:<Books></Books>,
+          children:[
+            {
+              path:'/books/addBook',
+              element:<AddBook></AddBook>
+            },
+            {
+              path:"/books/updateBook",
+              element:<UpdateBook></UpdateBook>
+            }
+          ]
+        }
       ]
     }
   ]);

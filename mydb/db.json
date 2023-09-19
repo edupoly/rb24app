@@ -1,0 +1,29 @@
+{
+  "books": [
+    {
+      "title": "Bootstrap 5",
+      "author": "Manjunath K",
+      "id": 7
+    },
+    {
+      "title": "Nenu Na BLACK shirtuuu",
+      "author": "Vamsi",
+      "id": 8
+    },
+    {
+      "title": "HOW TO TEACH JS",
+      "author": "Dhritiman",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
